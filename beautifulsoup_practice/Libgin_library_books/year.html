@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <td>
+        <form action="search.php" name="libgen"><br />
+            <input autofocus="autofocus" id="searchform" maxlength="80" name="req" size="60" value="fiction" />
+            <input disabled';="" document.forms.item(0).submit();'="" onclick="this.disabled=" type="submit"
+                value="Search!" /><br />
+            <font color="gray" face="Arial" size="1"><a href="../batchsearchindex.php">Batch search for books</a>
+            </font><br />
+            <label><b>Download type:</b></label>
+            <select name="open" size="1">
+                <option selected="selected" value="0">Resumed dl with original filename</option>
+                <option value="1">Resumed dl with translit filename</option>
+                <option value="2">Resumed dl with md5 filename</option>
+                <option value="3">Open file in browser</option>
+            </select>
+            <label><b>Results per page</b></label>
+            <select name="res" size="1">
+                <option selected="selected" value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <br />
+            <b>View results:</b>
+            <input checked="" name="view" type="radio" value="simple" />
+            <label for="simple">Simple</label>
+            <input name="view" type="radio" value="detailed" />
+            <label for="detailed">Detailed</label>
+            <b> Search with mask (word*):</b>
+            <input checked="" name="phrase" type="radio" value="1" />
+            <label for="detailed">No</label>
+            <input name="phrase" type="radio" value="0" />
+            <label for="simple">Yes</label>
+            <br />
+            <font><b>Search in fields</b></font>
+            <input checked="" name="column" type="radio" value="def" /><a href="#"
+                title="Columns: Title,Author(s),Series,Periodical,Publisher,Year,VolumeInfo">The column set
+                default</a>
+            <input name="column" type="radio" value="title" />Title
+            <input name="column" type="radio" value="author" />Author(s)
+            <input name="column" type="radio" value="series" />Series<br />
+            <input name="column" type="radio" value="publisher" />Publisher
+            <input name="column" type="radio" value="year" />Year
+            <input name="column" type="radio" value="identifier" />ISBN
+            <input name="column" type="radio" value="language" /><a href=""
+                title="Russian, English, German, French, Spanish, ... etc. (ISO 639)">Language</a>
+            <input name="column" type="radio" value="md5" />MD5
+            <input name="column" type="radio" value="tags" />Tags
+            <!--<input type='radio' name='column' value='extension'>Extension-->
+        </form>
+    </td>
+    <td>
+        <h1><a href="/" style="color:#A00000">Library Genesis</a></h1><br>Current alias domains are <a
+            href="http://libgen.rs/">libgen.rs</a>, <a href="http://libgen.is/">libgen.is</a>, <a
+            href="http://libgen.st/">libgen.st</a>. Update your bookmarks!<br /><a
+            href="https://wiki.mhut.org/project:get_involved">Get involved to help the project!</a><br /><a
+            href="https://wiki.mhut.org/catalog:search">A guide to effective catalog searching</a><br />Try <a
+            href="https://wiki.mhut.org/software:libgen_desktop">Libgen Desktop</a> application! Now with IPFS
+        downloads!<br />
+        </br>
+    </td>
+    <td align="left" width="45%">
+        <font color="grey" size="1">6598 files found | showing results from 1 to 25</font>
+    </td>
+    <td align="center" width="10%">
+        <font color="gray" size="3"><a
+                href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=def&amp;sortmode=ASC&amp;page=2">
+                ►</a>
+        </font>
+    </td>
+    <td align="right" width="45%">
+        <font size="2">also search "fiction" in <a
+                href="/foreignfiction/index.php?s=fiction&amp;f_lang=All&amp;f_columns=0&amp;f_ext=All&amp;f_group=1">fiction</a>
+        </font>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=id&amp;sortmode=DESC"
+                title="Sort results by ID">ID</a></b></td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=author&amp;sortmode=DESC"
+                title="Sort results by Author">Author(s)</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=title&amp;sortmode=DESC"
+                title="Sort results by Title">Title</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=publisher&amp;sortmode=DESC"
+                title="Sort results by Publisher">Publisher</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=year&amp;sortmode=DESC"
+                title="Sort results by Year">Year</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=pages&amp;sortmode=DESC"
+                title="Sort results by Pages">Pages</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=language&amp;sortmode=DESC"
+                title="Sort results by Language">Language</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=filesize&amp;sortmode=DESC"
+                title="Sort results by Size">Size</a></b>
+    </td>
+    <td><b><a href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=extension&amp;sortmode=DESC"
+                title="Sort results by Extension">Extension</a></b>
+    </td>
+    <td colspan="2"><b>Mirrors</b></td>
+    <td><b>Edit</b></td>
+    <td>43802</td>
+    <td><a href="search.php?req=Адам Парфрей&amp;column[]=author">Адам Парфрей</a></td>
+    <td width="500"><a href="search.php?req=non-fiction&amp;column=series">
+            <font color="green" face="Times"><i>non-fiction</i></font>
+        </a><br /><a href="book/index.php?md5=BF10621DE9A8243260DB72B34E45BF82" id="43802" title="">Культура времен
+            Апокалипсиса<br />
+            <font color="green" face="Times"><i>5-9681-0022-2</i></font>
+        </a></td>
+    <td>Ультра. Культура</td>
+    <td nowrap="">2004</td>
+    <td>599</td>
+    <td>Russian</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/BF10621DE9A8243260DB72B34E45BF82" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=BF10621DE9A8243260DB72B34E45BF82" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/BF10621DE9A8243260DB72B34E45BF82" title="Libgen Librarian">[edit]</a></td>
+    <td>43992</td>
+    <td><a href="search.php?req=%D0%93%D1%80%D0%B8%D0%BD%D1%81%D0%BF%D1%83%D0%BD+%D0%9B.&amp;column=author">Гринспун
+            Л.</a>,<a href="search.php?req=+%D0%91%D0%B0%D0%BA%D0%B0%D0%BB%D0%B0%D1%80+%D0%94.%D0%91.&amp;column=author">
+            Бакалар Д.Б.</a></td>
+    <td width="500"><a href="search.php?req=non-fiction&amp;column=series">
+            <font color="green" face="Times"><i>non-fiction</i></font>
+        </a><br /><a href="book/index.php?md5=8FF570B2F3E0ADB9BE1789C4F03D4625" id="43992" title="">Марихуана:
+            Запрет. лекарство<br />
+            <font color="green" face="Times"><i>5-98042-003-7</i></font>
+        </a></td>
+    <td>Ультра. Культура</td>
+    <td nowrap="">2003</td>
+    <td>217</td>
+    <td>Russian</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/8FF570B2F3E0ADB9BE1789C4F03D4625" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=8FF570B2F3E0ADB9BE1789C4F03D4625" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/8FF570B2F3E0ADB9BE1789C4F03D4625" title="Libgen Librarian">[edit]</a></td>
+    <td>52089</td>
+    <td><a href="search.php?req=%D0%94%D0%B6.+%D0%94.+%D0%9B%D0%B0%D1%81%D0%B8%D0%BA%D0%B0&amp;column=author">Дж. Д.
+            Ласика</a></td>
+    <td width="500"><a href="search.php?req=cybertime%2Fnon+fiction&amp;column=series">
+            <font color="green" face="Times"><i>cybertime/non fiction</i></font>
+        </a><br /><a href="book/index.php?md5=F323CBC120FBB7502EEFAF44B6F0C8D4" id="52089" title="">Даркнет.
+            Обратная сторона Сети<br />
+            <font color="green" face="Times"><i>5-9681-0100-8</i></font>
+        </a></td>
+    <td>УльтраКультура</td>
+    <td nowrap="">2006</td>
+    <td>399</td>
+    <td>Russian</td>
+    <td nowrap="">978 Kb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/F323CBC120FBB7502EEFAF44B6F0C8D4" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=F323CBC120FBB7502EEFAF44B6F0C8D4" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/F323CBC120FBB7502EEFAF44B6F0C8D4" title="Libgen Librarian">[edit]</a></td>
+    <td>56686</td>
+    <td><a href="search.php?req=Roz+Kaveney&amp;column=author">Roz Kaveney</a></td>
+    <td width="500"><a href="book/index.php?md5=2504C6E5D5E22798099F033521F627BB" id="56686" title="">From Alien to
+            The Matrix: Reading Science Fiction Film<br />
+            <font color="green" face="Times"><i>9781850438052, 1850438056</i></font>
+        </a></td>
+    <td>I. B. Tauris</td>
+    <td nowrap="">2005</td>
+    <td>210</td>
+    <td>English</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/2504C6E5D5E22798099F033521F627BB" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=2504C6E5D5E22798099F033521F627BB" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/2504C6E5D5E22798099F033521F627BB" title="Libgen Librarian">[edit]</a></td>
+    <td>58502</td>
+    <td><a href="search.php?req=Joseph+J.+Romm&amp;column=author">Joseph J. Romm</a></td>
+    <td width="500"><a href="book/index.php?md5=B8A3A6A474EDDDC9D2D1A9D9579E217A" id="58502" title="">The Hype about
+            Hydrogen: Fact and Fiction in the Race to Save the Climate <font color="green" face="Times">
+                <i>[1 ed.]</i>
+            </font><br />
+    <td nowrap="">2004</td>
+    <td>212</td>
+    <td>English</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/B8A3A6A474EDDDC9D2D1A9D9579E217A" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=B8A3A6A474EDDDC9D2D1A9D9579E217A" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/B8A3A6A474EDDDC9D2D1A9D9579E217A" title="Libgen Librarian">[edit]</a></td>
+    <td>58580</td>
+    <td><a href="search.php?req=Rob+Shein&amp;column=author">Rob Shein</a>,<a
+            href="search.php?req=+David+Litchfield&amp;column=author"> David Litchfield</a>,<a
+            href="search.php?req=+Marcus+Sachs&amp;column=author"> Marcus Sachs</a></td>
+    <td width="500"><a href="search.php?req=Cyber-Fiction&amp;column=series">
+            <font color="green" face="Times"><i>Cyber-Fiction</i></font>
+        </a><br /><a href="book/index.php?md5=FBA4F80B6B54E25224D347269A550B3C" id="58580" title="">Zero Day
+            Exploit: Countdown to Darkness <font color="green" face="Times"><i>[First Edition]</i></font><br />
+            <font color="green" face="Times"><i>9781931836098, 1931836094</i></font>
+        </a></td>
+    <td>Syngress</td>
+    <td nowrap="">2004</td>
+    <td>363</td>
+    <td>English</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/FBA4F80B6B54E25224D347269A550B3C" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=FBA4F80B6B54E25224D347269A550B3C" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/FBA4F80B6B54E25224D347269A550B3C" title="Libgen Librarian">[edit]</a></td>
+    <td>64353</td>
+    <td><a href="search.php?req=Matthew+Caley&amp;column=author">Matthew Caley</a>,<a
+            href="search.php?req=+Steve+Lannin&amp;column=author"> Steve Lannin</a></td>
+    <td width="500"><a href="book/index.php?md5=5372624B413DBBC3C0EF2D0BEEC3B95D" id="64353" title="">Pop Fiction:
+            The Song in Cinema<br />
+            <font color="green" face="Times"><i>9781841500782, 1-84150-078-X</i></font>
+        </a></td>
+    <td>Intellect Ltd</td>
+    <td nowrap="">2005</td>
+    <td>165</td>
+    <td>English</td>
+    <td nowrap="">3 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/5372624B413DBBC3C0EF2D0BEEC3B95D" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=5372624B413DBBC3C0EF2D0BEEC3B95D" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/5372624B413DBBC3C0EF2D0BEEC3B95D" title="Libgen Librarian">[edit]</a></td>
+    <td>66700</td>
+    <td><a href="search.php?req=Gordon+E.+Slethaug&amp;column=author">Gordon E. Slethaug</a></td>
+    <td width="500"><a href="search.php?req=The+SUNY++in+postmodern+culture&amp;column=series">
+            <font color="green" face="Times"><i>The SUNY series in postmodern culture</i></font>
+        </a><br /><a href="book/index.php?md5=8955E1726CD2378C40708951FEFA4623" id="66700" title="">Beautiful chaos:
+            chaos theory and metachaotics in recent American fiction<br />
+            <font color="green" face="Times"><i>9780791447413, 0-7914-4741-3, 0791447421</i></font>
+        </a></td>
+    <td>State University of New York Press</td>
+    <td nowrap="">2000</td>
+    <td>240</td>
+    <td>English</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/8955E1726CD2378C40708951FEFA4623" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=8955E1726CD2378C40708951FEFA4623" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/8955E1726CD2378C40708951FEFA4623" title="Libgen Librarian">[edit]</a></td>
+    <td>66804</td>
+    <td><a href="search.php?req=Stableford+B.&amp;column=author">Stableford B.</a></td>
+    <td width="500"><a href="book/index.php?md5=1E8696D5327796EDE624873AC826428D" id="66804" title="">Science Fact
+            and Science Fiction: An Encyclopedia <font color="green" face="Times"><i>[Volume 1]</i></font><br />
+            <font color="green" face="Times"><i>0415974607, 9780415974608</i></font>
+        </a></td>
+    <td>Routledge</td>
+    <td nowrap="">2006</td>
+    <td>758</td>
+    <td>English</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/1E8696D5327796EDE624873AC826428D" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=1E8696D5327796EDE624873AC826428D" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/1E8696D5327796EDE624873AC826428D" title="Libgen Librarian">[edit]</a></td>
+    <td>67333</td>
+    <td><a href="search.php?req=Waller+J.&amp;column=author">Waller J.</a></td>
+    <td width="500"><a href="book/index.php?md5=18F26266F2609D287045A10377D65E94" id="67333" title="">Fabulous
+            Science: Fact and Fiction in the History of Scientific Discovery <font color="green" face="Times">
+                <i>[1st edition]</i>
+            </font></a></td>
+    <td></td>
+    <td nowrap="">2004</td>
+    <td>321</td>
+    <td>English</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/18F26266F2609D287045A10377D65E94" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=18F26266F2609D287045A10377D65E94" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/18F26266F2609D287045A10377D65E94" title="Libgen Librarian">[edit]</a></td>
+    <td>73285</td>
+    <td><a href="search.php?req=H+Dudeney&amp;column=author">H Dudeney</a></td>
+    <td width="500"><a href="search.php?req=Five+Thirty+Six+Puzz+Prob+SL+241&amp;column=series">
+            <font color="green" face="Times"><i>Five Thirty Six Puzz Prob SL 241</i></font>
+        </a><br /><a href="book/index.php?md5=56A316743A99A5E3655189EA2693FB3A" id="73285" title="">536 puzzles and
+            curious problems <font color="green" face="Times"><i>[Scribner's Sons ed.]</i></font><br />
+            <font color="green" face="Times"><i>0684717557, 0684310325, 9780684717555, 9780684310329</i></font>
+        </a></td>
+    <td>Scribner Paper Fiction</td>
+    <td nowrap="">1970</td>
+    <td>442</td>
+    <td>English</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">djvu</td>
+    <td><a href="http://library.lol/main/56A316743A99A5E3655189EA2693FB3A" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=56A316743A99A5E3655189EA2693FB3A" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/56A316743A99A5E3655189EA2693FB3A" title="Libgen Librarian">[edit]</a></td>
+    <td>884143</td>
+    <td><a href="search.php?req=Michel+Parry&amp;column=author">Michel Parry</a></td>
+    <td width="500"><a href="search.php?req=Goldmann-Taschenbuch%2C%3A+Science-ficton&amp;column=series">
+            <font color="green" face="Times"><i>Goldmann-Taschenbuch, 23393 : Science-ficton</i></font>
+        </a><br /><a href="book/index.php?md5=68263BD84946DB1FA79926E7D3EB1B0F" id="884143" title="">Sex im 21.
+            Jahrhundert : Science-fiction-Stories ; SF-Erotika <font color="green" face="Times"><i>[Dt.
+                    Erstveröff., 1. Aufl]</i></font><br />
+            <font color="green" face="Times"><i>3442233933, 9783442233939</i></font>
+        </a></td>
+    <td>Goldmann</td>
+    <td nowrap="">1982</td>
+    <td>231</td>
+    <td>German</td>
+    <td nowrap="">1 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/68263BD84946DB1FA79926E7D3EB1B0F" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=68263BD84946DB1FA79926E7D3EB1B0F" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/68263BD84946DB1FA79926E7D3EB1B0F" title="Libgen Librarian">[edit]</a></td>
+    <td>112813</td>
+    <td><a href="search.php?req=Gordon+E.+Slethaug&amp;column=author">Gordon E. Slethaug</a></td>
+    <td width="500"><a href="search.php?req=S+U+N+Y+Series+in+Postmodern+Culture&amp;column=series">
+            <font color="green" face="Times"><i>S U N Y Series in Postmodern Culture</i></font>
+        </a><br /><a href="book/index.php?md5=98EA8F1A1A262C09E4F0E685C7FAE58C" id="112813" title="">Beautiful chaos
+            chaos theory and metachaotics in recent American fiction<br />
+            <font color="green" face="Times"><i>0791447421, 9780791447420, 0791447413, 9780791447413</i></font>
+        </a></td>
+    <td>State University of New York Press</td>
+    <td nowrap="">2000</td>
+    <td>232</td>
+    <td>English</td>
+    <td nowrap="">903 Kb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/98EA8F1A1A262C09E4F0E685C7FAE58C" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=98EA8F1A1A262C09E4F0E685C7FAE58C" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/98EA8F1A1A262C09E4F0E685C7FAE58C" title="Libgen Librarian">[edit]</a></td>
+    <td>112877</td>
+    <td><a href="search.php?req=Brian+Stableford&amp;column=author">Brian Stableford</a></td>
+    <td width="500"><a href="book/index.php?md5=C3D278B5BA66567A067A87F2539D6958" id="112877" title="">Science fact
+            and science fiction: an encyclopedia <font color="green" face="Times"><i>[1 ed.]</i></font><br />
+            <font color="green" face="Times"><i>9780415974608, 0415974607</i></font>
+        </a></td>
+    <td>Routledge</td>
+    <td nowrap="">2006</td>
+    <td>758</td>
+    <td>English</td>
+    <td nowrap="">4 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/C3D278B5BA66567A067A87F2539D6958" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=C3D278B5BA66567A067A87F2539D6958" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/C3D278B5BA66567A067A87F2539D6958" title="Libgen Librarian">[edit]</a></td>
+    <td>119391</td>
+    <td><a href="search.php?req=Rob+Shein&amp;column=author">Rob Shein</a>,<a
+            href="search.php?req=+David+Litchfield&amp;column=author"> David Litchfield</a>,<a
+            href="search.php?req=+Marcus+Sachs&amp;column=author"> Marcus Sachs</a></td>
+    <td width="500"><a href="search.php?req=Cyber-Fiction&amp;column=series">
+            <font color="green" face="Times"><i>Cyber-Fiction</i></font>
+        </a><br /><a href="book/index.php?md5=523434135BB5591C799455B4840D710A" id="119391" title="">Zero-Day
+            Exploit<br />
+            <font color="green" face="Times"><i>9781931836098, 1-931836-09-4</i></font>
+        </a></td>
+    <td>Syngress</td>
+    <td nowrap="">2004</td>
+    <td>363</td>
+    <td>English</td>
+    <td nowrap="">10 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/523434135BB5591C799455B4840D710A" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=523434135BB5591C799455B4840D710A" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/523434135BB5591C799455B4840D710A" title="Libgen Librarian">[edit]</a></td>
+    <td>123063</td>
+    <td><a href="search.php?req=William+Hirstein&amp;column=author">William Hirstein</a></td>
+    <td width="500"><a href="search.php?req=Philosophical+Psychopathology&amp;column=series">
+            <font color="green" face="Times"><i>Philosophical Psychopathology</i></font>
+        </a><br /><a href="book/index.php?md5=3698495BB07DA10EF4C35381B0F6D38E" id="123063" title="">Brain Fiction -
+            Self-Deception and the Riddle of Confabulation <font color="green" face="Times"><i>[1 ed.]</i>
+            </font><br />
+            <font color="green" face="Times"><i>0262083388, 9780262083386, 9781423796565</i></font>
+        </a></td>
+    <td>The MIT Press</td>
+    <td nowrap="">2004</td>
+    <td>303</td>
+    <td>English</td>
+    <td nowrap="">3 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/3698495BB07DA10EF4C35381B0F6D38E" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=3698495BB07DA10EF4C35381B0F6D38E" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/3698495BB07DA10EF4C35381B0F6D38E" title="Libgen Librarian">[edit]</a></td>
+    <td>880660</td>
+    <td><a href="search.php?req=%D0%AE%D0%BB%D0%B8%D1%8F+%D0%AE%D0%B7%D0%B8%D0%BA&amp;column=author">Юлия Юзик</a>
+    </td>
+    <td width="500"><a href="search.php?req=non-fiction&amp;column=series">
+            <font color="green" face="Times"><i>non-fiction</i></font>
+        </a><br /><a href="book/index.php?md5=0875857F5C7D99D35FB9A94350148151" id="880660" title="">Невесты Аллаха;
+            Лица и судьбы всех женщин-шахидок, взорвавшихся в России<br />
+            <font color="green" face="Times"><i>5-98042-034-7</i></font>
+        </a></td>
+    <td>Ультра.Культура</td>
+    <td nowrap="">2003</td>
+    <td>0</td>
+    <td>Russian</td>
+    <td nowrap="">3 Mb</td>
+    <td nowrap="">fb2</td>
+    <td><a href="http://library.lol/main/0875857F5C7D99D35FB9A94350148151" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=0875857F5C7D99D35FB9A94350148151" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/0875857F5C7D99D35FB9A94350148151" title="Libgen Librarian">[edit]</a></td>
+    <td>880657</td>
+    <td><a
+            href="search.php?req=%D0%98%D1%81%D1%80%D0%B0%D1%8D%D0%BB%D1%8C+%D0%A8%D0%B0%D0%BC%D0%B8%D1%80&amp;column=author">Исраэль
+            Шамир</a></td>
+    <td width="500"><a href="search.php?req=non-fiction&amp;column=series">
+            <font color="green" face="Times"><i>non-fiction</i></font>
+        </a><br /><a href="book/index.php?md5=A23C398E3CEB82F3E2FD7F98F2D2B788" id="880657" title="">Сосна и олива
+            или Неприметные прелести Святой Земли <font color="green" face="Times"><i>[2 ed.]</i></font><br />
+            <font color="green" face="Times"><i>5-98042-039-8</i></font>
+        </a></td>
+    <td>Ультра. Культура</td>
+    <td nowrap="">2003</td>
+    <td>0</td>
+    <td>Russian</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">fb2</td>
+    <td><a href="http://library.lol/main/A23C398E3CEB82F3E2FD7F98F2D2B788" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=A23C398E3CEB82F3E2FD7F98F2D2B788" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/A23C398E3CEB82F3E2FD7F98F2D2B788" title="Libgen Librarian">[edit]</a></td>
+    <td>880656</td>
+    <td><a href="search.php?req=%D0%9E%D0%BB%D0%B5%D0%B3+%D0%9A%D0%B8%D1%80%D0%B5%D0%B5%D0%B2&amp;column=author">Олег
+            Киреев</a></td>
+    <td width="500"><a href="search.php?req=non-fiction&amp;column=series">
+            <font color="green" face="Times"><i>non-fiction</i></font>
+        </a><br /><a href="book/index.php?md5=1BCA87DEECD4C14151DF911F2C349E14" id="880656" title="">Поваренная
+            книга медиа-активиста<br />
+            <font color="green" face="Times"><i>5-9681-0062-1</i></font>
+        </a></td>
+    <td>Ультра. Культура</td>
+    <td nowrap="">2006</td>
+    <td>0</td>
+    <td>Russian</td>
+    <td nowrap="">614 Kb</td>
+    <td nowrap="">fb2</td>
+    <td><a href="http://library.lol/main/1BCA87DEECD4C14151DF911F2C349E14" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=1BCA87DEECD4C14151DF911F2C349E14" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/1BCA87DEECD4C14151DF911F2C349E14" title="Libgen Librarian">[edit]</a></td>
+    <td>179150</td>
+    <td><a href="search.php?req=&amp;column=author"></a></td>
+    <td width="500"><a href="book/index.php?md5=9DF118E268FC86734013853E27FF6DF7" id="179150" title="">The Cambridge
+            Companion To Science Fiction<br />
+            <font color="green" face="Times"><i>978-0-511-07829-3, 0-511-07829-3, 978-0-521-81626-7, 0-521-81626-2,
+                    978-0-521-01657-5, 0-521-01657-6</i></font>
+        </a></td>
+    <td>cambridge univercity press</td>
+    <td nowrap=""></td>
+    <td>325</td>
+    <td>English</td>
+    <td nowrap="">1 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/9DF118E268FC86734013853E27FF6DF7" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=9DF118E268FC86734013853E27FF6DF7" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/9DF118E268FC86734013853E27FF6DF7" title="Libgen Librarian">[edit]</a></td>
+    <td>880655</td>
+    <td><a
+            href="search.php?req=%D0%9C%D1%8D%D1%82%D1%82%D1%8C%D1%8E+%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%BD+%26amp&amp;column=author">Мэттью
+            Коллин &amp;</a>;<a
+            href="search.php?req=+%D0%94%D0%B6%D0%BE%D0%BD+%D0%93%D0%BE%D0%B4%D1%84%D1%80%D0%B8&amp;column=author">
+            Джон Годфри</a></td>
+    <td width="500"><a href="search.php?req=non-fiction&amp;column=series">
+            <font color="green" face="Times"><i>non-fiction</i></font>
+        </a><br /><a href="book/index.php?md5=AF06EAE8D724A12BF28BE0B2CFC60B4B" id="880655" title="">Измененное
+            состояние. История экстази и рейв-культуры<br />
+            <font color="green" face="Times"><i>5-98042-049-5</i></font>
+        </a></td>
+    <td>«Ультра.Культура»</td>
+    <td nowrap="">2004</td>
+    <td>0</td>
+    <td>Russian</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">fb2</td>
+    <td><a href="http://library.lol/main/AF06EAE8D724A12BF28BE0B2CFC60B4B" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=AF06EAE8D724A12BF28BE0B2CFC60B4B" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/AF06EAE8D724A12BF28BE0B2CFC60B4B" title="Libgen Librarian">[edit]</a></td>
+    <td>180290</td>
+    <td><a href="search.php?req=Edward+James&amp;column=author">Edward James</a>,<a
+            href="search.php?req=+Farah+Mendlesohn&amp;column=author"> Farah Mendlesohn</a></td>
+    <td width="500"><a href="search.php?req=Cambridge+Companions+to+Literature&amp;column=series">
+            <font color="green" face="Times"><i>Cambridge Companions to Literature</i></font>
+        </a><br /><a href="book/index.php?md5=A9D67221BAEC9F9EB5C7BF1516AB94A0" id="180290" title="">The Cambridge
+            Companion to Science Fiction<br />
+            <font color="green" face="Times"><i>9780521816267, 0521816262, 0521016576</i></font>
+        </a></td>
+    <td>Cambridge University Press</td>
+    <td nowrap="">2003</td>
+    <td>325</td>
+    <td>English</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/A9D67221BAEC9F9EB5C7BF1516AB94A0" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=A9D67221BAEC9F9EB5C7BF1516AB94A0" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/A9D67221BAEC9F9EB5C7BF1516AB94A0" title="Libgen Librarian">[edit]</a></td>
+    <td>181029</td>
+    <td><a href="search.php?req=R.+Barton+Palmer&amp;column=author">R. Barton Palmer</a></td>
+    <td width="500"><a href="book/index.php?md5=5F5239F84CE80316BC8284E68FA00D60" id="181029" title="">19th century
+            american fiction on screen <font color="green" face="Times"><i>[1 ed.]</i></font><br />
+            <font color="green" face="Times"><i>0521842212, 9780521842211, 9780511275135</i></font>
+        </a></td>
+    <td>Cambridge University Press</td>
+    <td nowrap="">2007</td>
+    <td>278</td>
+    <td>English</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/5F5239F84CE80316BC8284E68FA00D60" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=5F5239F84CE80316BC8284E68FA00D60" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/5F5239F84CE80316BC8284E68FA00D60" title="Libgen Librarian">[edit]</a></td>
+    <td>181568</td>
+    <td><a href="search.php?req=John+Casti&amp;column=author">John Casti</a></td>
+    <td width="500"><a href="book/index.php?md5=8859561BE02A7ACEDA4FD822D51FACBD" id="181568" title="">The One True
+            Platonic Heaven: A Scientific Fiction of the Limits of Knowledge<br />
+            <font color="green" face="Times"><i>9780309085472, 0-309-08547-0</i></font>
+        </a></td>
+    <td>Joseph Henry Press</td>
+    <td nowrap="">2003</td>
+    <td>180</td>
+    <td>English</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/8859561BE02A7ACEDA4FD822D51FACBD" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=8859561BE02A7ACEDA4FD822D51FACBD" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/8859561BE02A7ACEDA4FD822D51FACBD" title="Libgen Librarian">[edit]</a></td>
+    <td>181725</td>
+    <td><a href="search.php?req=Stuart+Taberner&amp;column=author">Stuart Taberner</a></td>
+    <td width="500"><a href="search.php?req=Cambridge+Studies+in+German&amp;column=series">
+            <font color="green" face="Times"><i>Cambridge Studies in German</i></font>
+        </a><br /><a href="book/index.php?md5=66BE893BC40B5AAC8310CC9309249730" id="181725" title="">Contemporary
+            German Fiction: Writing in the Berlin Republic <font color="green" face="Times"><i>[1 ed.]</i>
+            </font><br />
+            <font color="green" face="Times"><i>0521860784, 9780521860789</i></font>
+        </a></td>
+    <td>Cambridge University Press</td>
+    <td nowrap="">2007</td>
+    <td>266</td>
+    <td>English</td>
+    <td nowrap="">2 Mb</td>
+    <td nowrap="">pdf</td>
+    <td><a href="http://library.lol/main/66BE893BC40B5AAC8310CC9309249730" title="Libgen &amp; IPFS &amp; Tor">[1]</a>
+    </td>
+    <td><a href="http://libgen.li/ads.php?md5=66BE893BC40B5AAC8310CC9309249730" title="Libgen.li">[2]</a></td>
+    <td><a href="https://library.bz/main/edit/66BE893BC40B5AAC8310CC9309249730" title="Libgen Librarian">[edit]</a></td>
+    <td align="left" width="45%"></td>
+    <td align="center" width="10%">
+        <font color="gray" size="3"><a
+                href="search.php?&amp;req=fiction&amp;phrase=1&amp;view=simple&amp;column=def&amp;sort=def&amp;sortmode=ASC&amp;page=2">
+                ►</a>
+        </font>
+    </td>
+    <td align="right" width="45%"></td>
+    
+</body>
+</html>
